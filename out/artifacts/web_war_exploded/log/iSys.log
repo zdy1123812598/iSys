@@ -1,0 +1,44 @@
+2018-08-09 00:18:28,453 INFO [com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource] - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60r5g9x7b0ice12rsghv|229cd935, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60r5g9x7b0ice12rsghv|229cd935, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/isys, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+2018-08-09 00:18:28,750 DEBUG [com.mystic.user.MySqlUserDao] - select * from tbuser where logonname=? and password=? 
+2018-08-09 00:18:28,936 DEBUG [com.mystic.role.MySqlRoleDao] - select a.* from tbrole a,tbroleuser b where a.roleid = b.roleid and b.userid=?
+2018-08-09 00:18:28,956 DEBUG [com.mystic.link.MySqlLinkDao] - select a.* from tblink a,tbrolelink b where a.linkid=b.linkid and b.roleid=? order by linkid
+2018-08-09 00:18:28,970 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where linkid = ? 
+2018-08-09 00:18:28,975 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where linkid = ? 
+2018-08-09 00:18:28,977 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where linkid = ? 
+2018-08-09 00:18:28,979 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where linkid = ? 
+2018-08-09 00:18:33,384 DEBUG [com.mystic.organization.MySqlOrganizationDao] - select * from tborganization where 1  order by organizationid asc
+2018-08-09 00:18:33,394 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tborganization where 1  order by organizationid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 1 )tempp where tempp.num > 0]
+2018-08-09 00:18:38,114 DEBUG [com.mystic.user.MySqlUserDao] - select * from tbuser where 1  order by userid asc
+2018-08-09 00:18:38,130 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tbuser where 1  order by userid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 2 )tempp where tempp.num > 0]
+2018-08-09 00:18:44,061 DEBUG [com.mystic.organization.MySqlOrganizationDao] - select * from tborganization 
+2018-08-09 00:18:44,723 DEBUG [com.mystic.user.MySqlUserDao] - select * from tbuser where 1  order by userid asc
+2018-08-09 00:18:44,725 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tbuser where 1  order by userid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 2 )tempp where tempp.num > 0]
+2018-08-09 00:18:45,498 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where 1  order by linkid asc
+2018-08-09 00:18:45,499 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tblink where 1  order by linkid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 5 )tempp where tempp.num > 0]
+2018-08-09 00:18:47,480 DEBUG [com.mystic.role.MySqlRoleDao] - select * from tbrole where 1  order by roleid asc
+2018-08-09 00:18:47,481 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tbrole where 1  order by roleid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 1 )tempp where tempp.num > 0]
+2018-08-09 00:18:51,119 DEBUG [com.mystic.role.MySqlRoleDao] - select * from tbrole where roleid = ? 
+2018-08-09 00:18:51,508 DEBUG [com.mystic.organization.MySqlOrganizationDao] - select * from tborganization 
+2018-08-09 00:18:51,510 DEBUG [com.mystic.user.MySqlUserDao] - select b.* from tbroleuser a,tbuser b where a.userid = b.userid  and roleid = ?
+2018-08-09 00:18:51,530 DEBUG [com.mystic.user.MySqlUserDao] - select * from tbuser where organizationid = ? 
+2018-08-09 00:18:51,553 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where parentid=0
+2018-08-09 00:18:51,555 DEBUG [com.mystic.role.MySqlRoleDao] - select * from tbrolelink where roleid = ?
+2018-08-09 00:18:51,556 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where linkid = ? 
+2018-08-09 00:18:51,559 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where linkid = ? 
+2018-08-09 00:18:51,563 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where linkid = ? 
+2018-08-09 00:18:51,565 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where linkid = ? 
+2018-08-09 00:18:51,568 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where parentid=?
+2018-08-09 00:18:52,247 DEBUG [com.mystic.organization.MySqlOrganizationDao] - select * from tborganization where 1  order by organizationid asc
+2018-08-09 00:18:52,248 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tborganization where 1  order by organizationid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 1 )tempp where tempp.num > 0]
+2018-08-09 00:18:55,729 DEBUG [com.mystic.organization.MySqlOrganizationDao] - select * from tborganization where 1  order by organizationid asc
+2018-08-09 00:18:55,730 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tborganization where 1  order by organizationid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 1 )tempp where tempp.num > 0]
+2018-08-09 00:19:00,810 DEBUG [com.mystic.user.MySqlUserDao] - select * from tbuser where 1  order by userid asc
+2018-08-09 00:19:00,811 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tbuser where 1  order by userid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 2 )tempp where tempp.num > 0]
+2018-08-09 00:19:01,777 DEBUG [com.mystic.organization.MySqlOrganizationDao] - select * from tborganization 
+2018-08-09 00:19:02,876 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where 1  order by linkid asc
+2018-08-09 00:19:02,877 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tblink where 1  order by linkid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 5 )tempp where tempp.num > 0]
+2018-08-09 00:19:04,299 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where parentid=0
+2018-08-09 00:19:04,967 DEBUG [com.mystic.role.MySqlRoleDao] - select * from tbrole where 1  order by roleid asc
+2018-08-09 00:19:04,969 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tbrole where 1  order by roleid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 1 )tempp where tempp.num > 0]
+2018-08-09 00:19:05,685 DEBUG [com.mystic.link.MySqlLinkDao] - select * from tblink where 1  order by linkid asc
+2018-08-09 00:19:05,686 DEBUG [com.mystic.util.Pagination] - paginationSQL[ SELECT * FROM (  SELECT temp.* ,(@rowNum:=@rowNum+1) as num FROM ( select * from tblink where 1  order by linkid asc) temp ,(Select (@rowNum :=0) ) numcou where  (@rowNum) < 5 )tempp where tempp.num > 0]

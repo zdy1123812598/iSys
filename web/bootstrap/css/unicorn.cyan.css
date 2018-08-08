@@ -1,0 +1,110 @@
+/**
+ * Unicorn Admin Template
+ * Diablo9983 -> diablo9983@gmail.com
+**/
+body {
+	background-color: #CEDDED;
+}
+
+#header {
+    box-shadow: 0 1px 0 #b4cde6;
+	background-color: #CEDDED;
+    background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#bcd1e7), to(#f3f8ff));
+    background-image: -webkit-linear-gradient(top, #bcd1e7 0%, #f3f8ff 100%);
+    background-image: -moz-linear-gradient(top, #bcd1e7 0%, #f3f8ff 100%);
+	background-image: -ms-linear-gradient(top, #bcd1e7 0%, #f3f8ff 100%);
+	background-image: -o-linear-gradient(top, #bcd1e7 0%, #f3f8ff 100%);
+	background-image: linear-gradient(top, #bcd1e7 0%, #f3f8ff 100%);
+    border-bottom: 1px solid #555555;
+}
+
+#user-nav .btn-inverse {
+    background-color: #aec7e1;
+	background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#aec7e1), to(#cedded));
+    background-image: -webkit-linear-gradient(top, #aec7e1 0%, #cedded 100%);
+    background-image: -moz-linear-gradient(top, #aec7e1 0%, #cedded 100%);
+    background-image: -ms-linear-gradient(top, #aec7e1 0%, #cedded 100%);
+	background-image: -o-linear-gradient(top, #aec7e1 0%, #cedded 100%);
+	background-image: linear-gradient(top, #aec7e1 0%, #cedded 100%);
+	border-top-color: #cedded;
+}
+
+#search input[type=text], #search button {
+	background-color: #f3f8ff;
+}
+#search input[type=text]:focus {
+	color: #777777;
+}
+
+#sidebar > ul {
+	border-top: 1px solid #b4cde6;
+	border-bottom: 1px solid #4E4E4E;
+}
+#sidebar > ul > li {
+	border-top: 1px solid #4E4E4E;
+	border-bottom: 1px solid #b4cde6;
+}
+#sidebar > ul > li.active {
+    background-color: #3a3a3a;
+	background-image: -webkit-gradient(linear, 0 0%, 0 100%, from(#b4cde6), to(#bcd1e7));
+	background-image: -webkit-linear-gradient(top, #b4cde6 0%, #bcd1e7 100%);
+	background-image: -moz-linear-gradient(top, #b4cde6 0%, #bcd1e7 100%);
+	background-image: -ms-linear-gradient(top, #b4cde6 0%, #bcd1e7 100%);
+	background-image: -o-linear-gradient(top, #b4cde6 0%, #bcd1e7 100%);
+	background-image: linear-gradient(top, #b4cde6 0%, #bcd1e7 100%);
+}
+
+#sidebar > ul > li.open.submenu > a {
+	border-bottom: 1px solid #b4cde6;
+}
+#sidebar > ul > li.open.active.submenu > a {
+	border-bottom: 1px solid #c64e2;
+}
+#sidebar > ul > li > a > .label {
+	background-color: #b4cde6;
+}
+#sidebar > ul > li > a:hover {
+	background-color: #e3e8e7;
+}
+#sidebar > ul ul {
+	border-top: 1px solid #4E4E4E;
+	background-color: #c64e2;
+}
+#sidebar > ul ul li a {
+	border-top: 1px solid #b4cde6;
+	border-bottom: 1px solid #202020;
+}
+#sidebar > ul ul li a:hover, #sidebar > ul ul li.active a {
+	color: #282828;
+	background-color: #e4e9e7;
+}
+
+.dropdown-menu li a:hover, .dropdown-menu .active a, .dropdown-menu .active a:hover {
+    color: #eeeeee;
+	background-color:  #CEDDED;
+    background-image: -webkit-gradient(linear, 0 0%, 0 100%, #555555, #f3f8ff);
+    background-image: -webkit-linear-gradient(top, #555555 0%, #f3f8ff 100%);
+    background-image: -moz-linear-gradient(top, #555555 0%, #f3f8ff 100%);
+    background-image: -ms-linear-gradient(top, #555555 0%, #f3f8ff 100%);
+    background-image: -o-linear-gradient(top, #555555 0%, #f3f8ff 100%);
+    background-image: linear-gradient(top, #555555 0%, #f3f8ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555555', endColorstr='#f3f8ff',GradientType=0 ); /* IE6-9 */
+}
+
+@media (max-width: 480px) {
+	#sidebar > a {
+		background-image: -moz-linear-gradient(top, #464646 0%, #404040 100%);
+		border-bottom: 1px solid #6e6e6e;
+	}
+	#sidebar > ul {
+		background-color:  #CEDDED;
+	}
+}
+@media (min-width: 481px) and (max-width: 767px) {
+	#sidebar > ul ul:before {
+		border-right: 7px solid rgba(0, 0, 0, 0.2);
+	}
+	#sidebar > ul ul:after {
+		border-right: 6px solid #f3f8ff;
+    }
+}
